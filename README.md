@@ -26,29 +26,65 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
+1.Use module projname(input,output) to start the Verilog programmming.
 
+2.Assign inputs and outputs using the word input and output respectively.
 
+3.Use defined keywords like wire,assign and required logic gates to represent the boolean expression.
 
-Write the detailed procedure here 
+4.Use each output to represnt onre for differnce and the other for borrow.
+
+5.End the verilog program using keyword endmodule. 
 
 
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Manoj Guna Sundar Tella.
+RegisterNumber:  212221240026.
+
+HALF SUBTRACTOR:
+module sub(output B,D, input X,Y);
+assign D = (X ^ Y);
+assign B = (~X & Y);
+endmodule
+
+FULL SUBTRACTOR:
+module sub(X,Y,Z,B,D);
+input X,Y,Z;
+output B,D;
+assign D = (X^Y^Z);
+assign B = (~X&(Y^Z)|(Y&Z));
+endmodule
 */
 
 ## Output:
 
 ## Truthtable
+### Half Subtractor
+![halftruth](https://user-images.githubusercontent.com/94883876/192192432-4e6ad4d0-fe18-4cda-a059-250fc2739ca3.jpg)
+
+### Full Subtractor
+![fultruth](https://user-images.githubusercontent.com/94883876/192192425-c0cb9528-9c00-4fae-831f-9211828203e5.jpg)
+
 
 
 
 ##  RTL realization
+### Half Subtractor
+![halfbur](https://user-images.githubusercontent.com/94883876/192192173-db5363d6-2039-4175-beb6-852285a03201.jpg)
+
+### Full Subtractor
+![fulsub](https://user-images.githubusercontent.com/94883876/192192181-c691c22c-cdc6-4913-b3e7-123341a13323.jpg)
 
 
 ## Timing diagram 
+### Half Subtractor
+![haltime](https://user-images.githubusercontent.com/94883876/192192162-1cb64c7d-dc3a-4ed3-8820-bc3b122c2f72.jpg)
+
+### Full Subtractor
+![fultime](https://user-images.githubusercontent.com/94883876/192192153-19868b77-5569-45ca-b8f2-46e5fa39c8ea.jpg)
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
