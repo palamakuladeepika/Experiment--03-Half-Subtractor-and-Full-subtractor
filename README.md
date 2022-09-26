@@ -43,19 +43,22 @@ Program to design a half subtractor and full subtractor circuit and verify its t
 Developed by: Manoj Guna Sundar Tella.
 RegisterNumber:  212221240026.
 
-HALF SUBTRACTOR:
+### HALF SUBTRACTOR:
+```
 module sub(output B,D, input X,Y);
 assign D = (X ^ Y);
 assign B = (~X & Y);
 endmodule
-
-FULL SUBTRACTOR:
+```
+### FULL SUBTRACTOR:
+```
 module sub(X,Y,Z,B,D);
 input X,Y,Z;
 output B,D;
 assign D = (X^Y^Z);
 assign B = (~X&(Y^Z)|(Y&Z));
 endmodule
+```
 */
 
 ## Output:
