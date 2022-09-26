@@ -45,7 +45,7 @@ RegisterNumber:  212221240026.
 
 ### HALF SUBTRACTOR:
 ```
-module sub(output B,D, input X,Y);
+module burrow(output B,D, input X,Y);
 assign D = (X ^ Y);
 assign B = (~X & Y);
 endmodule
